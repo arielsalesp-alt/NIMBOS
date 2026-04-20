@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>טופס הזמנה נימבוס מול 99 דיגיטל</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="intro">
+        <div>
+          <p class="eyebrow">נימבוס הוט</p>
+          <h1>טופס הזמנה מול 99 דיגיטל</h1>
+          <p class="lead">ממלאים את הפרטים, שומרים טיוטה בדפדפן, ואז יוצרים PDF נקי לשליחה.</p>
+        </div>
+        <div class="actions no-print">
+          <button class="secondary" type="button" id="saveDraft">שמירת טיוטה</button>
+          <button class="secondary" type="button" id="clearForm">ניקוי טופס</button>
+          <button class="primary" type="button" id="printPdf">יצירת PDF לשליחה</button>
+        </div>
+      </section>
+
+      <form id="orderForm" autocomplete="on">
+        <section class="form-section">
+          <h2>שלב 1 - פרטי הזמנה כלליים</h2>
+          <div class="field-grid">
+            <label>
+              תאריך הזמנה
+              <input type="date" name="orderDate" />
+            </label>
+            <label>
+              מספר הזמנה נימבוס
+              <input type="text" name="nimbusOrderNumber" />
+            </label>
+            <label>
+              מספר פרויקט בהוט
+              <input type="text" name="hotProjectNumber" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>שלב 2 - פרטי העסק</h2>
+          <div class="field-grid">
+            <label>
+              שם העסק
+              <input type="text" name="businessName" placeholder="כפי שמופיע ברשם החברות או ב-WhatsApp" />
+            </label>
+            <label>
+              ח.פ / עוסק מורשה
+              <input type="text" name="businessId" />
+            </label>
+            <label class="wide">
+              כתובת מלאה כולל מיקוד
+              <input type="text" name="businessAddress" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>שלב 3 - פרטי איש קשר</h2>
+          <div class="field-grid">
+            <label>
+              שם הלקוח
+              <input type="text" name="contactName" />
+            </label>
+            <label>
+              תפקיד
+              <input type="text" name="contactRole" />
+            </label>
+            <label>
+              מספר טלפון לקוח
+              <input type="tel" name="contactPhone" />
+            </label>
+            <label>
+              אימייל לקוח
+              <input type="email" name="contactEmail" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>שלב 4 - פרטי חיבור WhatsApp</h2>
+          <div class="field-grid">
+            <label>
+              מספר WhatsApp
+              <input type="tel" name="whatsappNumber" />
+            </label>
+            <label>
+              האם המספר פעיל כיום בוואצאפ ביזנס?
+              <select name="whatsappBusinessActive">
+                <option value="">בחירה</option>
+                <option>כן</option>
+                <option>לא</option>
+                <option>לא ידוע</option>
+              </select>
+            </label>
+            <label>
+              האם המספר מחובר כיום ל-API רשמי?
+              <select name="officialApiConnected">
+                <option value="">בחירה</option>
+                <option>כן</option>
+                <option>לא</option>
+                <option>לא ידוע</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>שלב 5 - Facebook Business Manager</h2>
+          <div class="field-grid">
+            <label>
+              שם בעלים של חשבון הפייסבוק
+              <input type="text" name="facebookOwnerName" />
+            </label>
+            <label>
+              טלפון בעלים
+              <input type="tel" name="facebookOwnerPhone" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>שלב 6 - תשתית קיימת בארגון</h2>
+          <div class="field-grid">
+            <label>
+              האם קיים בארגון היום אומני צ'אנל + WhatsApp API?
+              <select name="hasOmniChannel">
+                <option value="">בחירה</option>
+                <option>כן</option>
+                <option>לא</option>
+                <option>לא ידוע</option>
+              </select>
+            </label>
+            <label>
+              אם כן - איזו מערכת?
+              <input type="text" name="existingSystem" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>שלב 7 - הקמת בוט ואינטגרציה</h2>
+          <div class="field-grid">
+            <label>
+              האם הלקוח מקים את הבוט באופן עצמאי בסטודיו?
+              <select name="selfBotSetup">
+                <option value="">בחירה</option>
+                <option>כן</option>
+                <option>לא</option>
+                <option>טרם נקבע</option>
+              </select>
+            </label>
+            <label>
+              האם נדרשת אינטגרציה למערכת צד ג'?
+              <select name="needsIntegration">
+                <option value="">בחירה</option>
+                <option>כן</option>
+                <option>לא</option>
+                <option>טרם נקבע</option>
+              </select>
+            </label>
+            <label>
+              אם כן - איזו מערכת?
+              <input type="text" name="integrationSystem" />
+            </label>
+            <label>
+              האם נדרש אפיון טכני עם 99 דיגיטל?
+              <select name="needsTechnicalSpec">
+                <option value="">בחירה</option>
+                <option>כן - מצריך רכישת שעות עבודה</option>
+                <option>לא</option>
+                <option>טרם נקבע</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>שלב 8 - משתמשים וחיבור ערוצים נוספים</h2>
+          <div class="field-grid">
+            <label>
+              כמות משתמשים למערכת
+              <input type="number" name="usersCount" min="0" />
+            </label>
+            <label>
+              לחבר פייסבוק פוסטים + מסנג'ר?
+              <select name="connectFacebook">
+                <option value="">בחירה</option>
+                <option>כן</option>
+                <option>לא</option>
+              </select>
+            </label>
+            <label>
+              לחבר אינסטגרם?
+              <select name="connectInstagram">
+                <option value="">בחירה</option>
+                <option>כן</option>
+                <option>לא</option>
+              </select>
+            </label>
+            <label>
+              לחבר מייל?
+              <select name="connectEmail">
+                <option value="">בחירה</option>
+                <option>כן</option>
+                <option>לא</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>שלב 9 - אנשי קשר הוט</h2>
+          <div class="field-grid">
+            <label>
+              שם המת"ל בהוט
+              <input type="text" name="hotManagerName" />
+            </label>
+            <label>
+              מספר טלפון של המת"ל
+              <input type="tel" name="hotManagerPhone" />
+            </label>
+            <label>
+              אימייל מת"ל
+              <input type="email" name="hotManagerEmail" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>הערות נוספות</h2>
+          <label>
+            הערות פנימיות או פרטים חשובים לשליחה
+            <textarea name="notes" rows="5"></textarea>
+          </label>
+        </section>
+      </form>
+    </main>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
