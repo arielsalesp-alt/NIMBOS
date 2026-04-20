@@ -57,7 +57,7 @@ textarea {
 }
 
 .hot-logo {
-  width: min(230px, 100%);
+  width: 96px;
   height: auto;
   display: block;
 }
@@ -248,7 +248,7 @@ textarea:focus {
   }
 
   .hot-logo {
-    width: 150px;
+    width: 72px;
   }
 
   .lead,
