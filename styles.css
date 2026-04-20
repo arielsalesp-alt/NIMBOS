@@ -51,6 +51,17 @@ textarea {
   background: var(--paper);
 }
 
+.brand-line {
+  display: grid;
+  gap: 10px;
+}
+
+.hot-logo {
+  width: min(230px, 100%);
+  height: auto;
+  display: block;
+}
+
 .eyebrow {
   margin: 0 0 8px;
   color: var(--accent-dark);
@@ -234,6 +245,10 @@ textarea:focus {
     padding: 0 0 10px;
     border-width: 0 0 1px;
     border-radius: 0;
+  }
+
+  .hot-logo {
+    width: 150px;
   }
 
   .lead,
