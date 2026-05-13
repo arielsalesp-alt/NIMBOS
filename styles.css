@@ -147,6 +147,11 @@ label {
   font-weight: 700;
 }
 
+.field-note {
+  color: var(--muted);
+  font-weight: 400;
+}
+
 label.wide {
   grid-column: span 2;
 }
